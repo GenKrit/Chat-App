@@ -7,8 +7,8 @@ function App() {
   return (
    <Router basename="/">
     <Routes>
-    <Route path="/chat" Component={Join}/>
-    <Route path="/chat-app"Component={Chat}/ >
+    <Route path="/chat-app" Component={Join}/>
+    <Route path="/chat"Component={Chat}/ >
    </Routes>
     </Router>
   );
