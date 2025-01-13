@@ -25,7 +25,7 @@ const Join = () => {
     return (
         <div className='joinPage'>
             <div className='joinContent'>
-                <h1><img className='img2' src={imge} alt='Chat-App' /> Chat-App</h1>
+                <h1><img className='img2' src={imge} alt='chat' /> Chat-App</h1>
                 <input
                     placeholder='Enter Your Name'
                     type='text'
@@ -33,7 +33,7 @@ const Join = () => {
                     onChange={handleInputChange}
                 /><br />
                 <Link 
-                    to={name.trim() ? '/chat-app' : '#'} 
+                    to={name.trim() ? '/chat' : '#'} 
                     onClick={handleLogin}
                 >
                     <button className='joinbtn'>Login</button>
