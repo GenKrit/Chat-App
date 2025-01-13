@@ -6,8 +6,8 @@ import Header from '../header/header'
 import Scroll from "react-scroll-to-bottom";
 import Baate from "../baate/baate";
 import SocketIO from "socket.io-client";
-const ENDPOINT = "https://chat-app-kappa-olive.vercel.app";
-// const ENDPOINT = "https://chat-flame-eight.vercel.app/";
+// const ENDPOINT = "https://chat-app-kappa-olive.vercel.app";
+const ENDPOINT = "https://chat-app-git-main-shashwats-projects-269f35a8.vercel.app";
 let socket;
 // let msg=[];
 const Chat = () => {
@@ -15,6 +15,7 @@ const Chat = () => {
   const [msg, setMsg] = useState([]);
   const [id, setID] = useState("");
   useEffect(() => {
+    
     socket = SocketIO(ENDPOINT, { transports: ["websocket"] });
     socket.on("connect", () => {
       alert("connected");
@@ -36,7 +37,7 @@ const Chat = () => {
     return () => {
       socket.off();
     };
-  },[]);
+  },[msg]);
   useEffect(() => {
     socket.on("sendMessage", (data) => {
       setMsg([...msg, data]);
