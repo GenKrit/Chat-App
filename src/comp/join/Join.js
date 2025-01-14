@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import imge from './Psgpraveen.png';
+import imge from './SPlogo.png';
 import './join.css';
 
 export let user = '';
